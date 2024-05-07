@@ -9,7 +9,7 @@
 <div class="container-fluid">
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Kelola Data Gejala</h1>
+<h1 class="h3 mb-2 text-gray-800">Kelola Data Solusi</h1>
 
 <!-- DataTales Example -->
 <div class="card border-0 shadow rounded">
@@ -22,9 +22,8 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Id</th>
-                        <th>Kode Gejala</th>
-                        <th>Gejala</th>
+                        <th>Nama Penyakit</th>
+                        <th>Solusi</th>
                         <th>Edit</th>
                         <th>Hapus</th>
                     </tr>
@@ -32,9 +31,8 @@
                 <tfoot>
                     <tr>
                         <th>No</th>
-                        <th>Id</th>
-                        <th>Kode Gejala</th>
-                        <th>Gejala</th>
+                        <th>Nama Penyakit</th>
+                        <th>Solusi</th>
                         <th>Edit</th>
                         <th>Hapus</th>
                     </tr>
@@ -43,9 +41,9 @@
                     @foreach($datagejala as $gejala)
                     <tr>
                         <td>{{$loop -> iteration}}</td>
-                        <td>{{$gejala -> id}}</td>
-                        <td>{{$gejala -> kodeGejala}}</td>
-                        <td>{{$gejala -> gejala}}</td>
+                        <td>{{$solusi -> id}}</td>
+                        <td>{{$solusi -> kodeGejala}}</td>
+                        <td>{{$solusi -> gejala}}</td>
                         <td>
                             <a href="{{ route('gejala.edit', $gejala->id) }}" class="btn btn-warning"><i class="fa-solid fa-edit"></i></a>
                         </td>

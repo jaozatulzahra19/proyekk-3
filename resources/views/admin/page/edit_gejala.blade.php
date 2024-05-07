@@ -14,7 +14,7 @@
                             <input type="hidden" name="id" value="{{ $gejala->id }}">
 
                             <div class="form-group">
-                                <label for="kodeGejala">Kode Gejala</label>
+                                <label for="kodeGejala">Nama Penyakit</label>
                                 <input type="text" name="kodeGejala" class="form-control @error('kodeGejala') is-invalid @enderror" value="{{ old('kodeGejala', $gejala->kodeGejala) }}" required autocomplete="kodeGejala" autofocus>
                                 @error('kodeGejala')
                                     <span class="invalid-feedback" role="alert">
@@ -24,7 +24,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="gejala">Nama Gejala</label>
+                                <label for="gejala">solusi</label>
                                 <input type="text" name="gejala" class="form-control @error('gejala') is-invalid @enderror" value="{{ old('gejala', $gejala->gejala) }}" required autocomplete="gejala">
                                 @error('gejala')
                                     <span class="invalid-feedback" role="alert">
