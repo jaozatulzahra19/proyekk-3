@@ -1,13 +1,15 @@
 <?php
 
-use App\Http\Controllers\GejalaController;
-use App\Http\Controllers\HomeController;
-use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\DiagnosaController;
+use App\Http\Controllers\GejalaController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PenyakitController;
 use App\Http\Controllers\RuleController;
+use App\Http\Controllers\UploadController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -55,3 +57,7 @@ Route::delete('/deleterule/{id}', [RuleController::class, 'destroy'])->name('des
 Route::get('/diagnosa', [DiagnosaController::class, 'diagnosa'])->name('diagnosa');
 Route::post('/insertdiagnosa', [DiagnosaController::class, 'insertdiagnosa'])->name('insertdiagnosa');
 Route::delete('/diagnosa/{id}', [DiagnosaController::class, 'destroy'])->name('destroy');
+
+Route::get('/upload123', [UploadController::class, 'upload'])->name('panunya_ojah');
+
+Route::post('/upload123/proses', [UploadController::class, 'unggah_gambar'])->name('unggah_gambar');
